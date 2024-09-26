@@ -9,9 +9,10 @@ public class Client
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
-	
+	private String nom;
 	public Client(String nom)
 	{
+		this.nom = nom;
 	}
 
 	/**
