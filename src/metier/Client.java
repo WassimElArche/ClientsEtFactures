@@ -9,7 +9,7 @@ public class Client
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
-	private String nom;
+	protected String nom;
 	public Client(String nom)
 	{
 		this.nom = nom;
@@ -22,7 +22,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return this.nom;
 	}
 	
 	/**
@@ -32,6 +32,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
@@ -74,7 +75,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return null;
+		return new Facture(montant,reglee);
 	}	
 	
 	/**
