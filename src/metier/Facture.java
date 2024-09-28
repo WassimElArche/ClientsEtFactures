@@ -26,7 +26,7 @@ public class Facture extends Client
 	
 	public Client getClient()
 	{
-		return null ;
+		return this ;
 	}
 
 	/**
