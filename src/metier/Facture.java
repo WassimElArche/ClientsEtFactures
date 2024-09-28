@@ -10,18 +10,11 @@ public class Facture extends Client
 	 */
 	private int montant;
 	private boolean reglee;
-	private LocalDate date;
+	private LocalDate date = LocalDate.now();
 
 
 	public Facture(String nom ,int montant , boolean relgee){
 		super(nom);
-		this.montant = montant ;
-		this.reglee = reglee;
-	}
-
-	public Facture(String nom ,int montant , boolean relgee , LocalDate date){
-		super(nom);
-		this.date = date;
 		this.montant = montant ;
 		this.reglee = reglee;
 	}
