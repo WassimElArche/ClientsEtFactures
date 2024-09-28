@@ -10,6 +10,7 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	protected String nom;
+
 	public Client(String nom)
 	{
 		this.nom = nom;
@@ -75,7 +76,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return new Facture(montant,reglee);
+		return null;
 	}	
 	
 	/**
@@ -104,5 +105,6 @@ public class Client
 	
 	public void delete()
 	{
+		this.delete();
 	}
 }
