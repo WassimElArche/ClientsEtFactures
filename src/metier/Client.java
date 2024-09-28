@@ -60,7 +60,11 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return factureList;
+		List<Facture> test = new ArrayList<Facture>(); 
+		for(Facture fact : factureList){
+			test = factureList;
+		}
+		return test;
 	}
 	
 	/**
@@ -88,7 +92,7 @@ public class Client
 	{
 		
 		Facture nvl = new Facture(montant,reglee);
-		if (reglee == true) factRegle.add(nvl);
+		if (reglee) factRegle.add(nvl);
 		return nvl ;
 	}	
 	
@@ -99,7 +103,6 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-
 		return factRegle;
 	}
 	
@@ -119,8 +122,7 @@ public class Client
 	
 	public void delete()
 	{
-		this.delete();
-	
+
 		
 	}
 }
