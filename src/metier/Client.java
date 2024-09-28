@@ -91,16 +91,13 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		
-		
-		if (reglee) {
-			Facture nvl = new Facture(montant,reglee);
-			factRegle.add(nvl);
-			factureList.add(nvl);
-			return nvl ;
+		if(reglee){
+			Facture factReglee = new Facture(montant, reglee);
+			factRegle.add(factReglee);
+			return factReglee;
 		}
-		return null;
-		
+		else return null;
+
 		
 	}	
 	
