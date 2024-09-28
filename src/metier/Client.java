@@ -67,7 +67,11 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int s = 0;
+		for(Facture fact : factureList){
+			s += fact.getMontant();
+		}
+		return s;
 	}
 
 	/**
@@ -79,9 +83,11 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
+		if(reglee == true){
 		Facture nvl = new Facture(montant,reglee);
 		factureList.add(nvl);
-		return nvl ;
+		return nvl ;}
+		else return null;
 	}	
 	
 	/**
