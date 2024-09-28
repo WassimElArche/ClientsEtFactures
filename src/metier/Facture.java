@@ -22,7 +22,7 @@ public class Facture
 
 
 	public Facture( int montant){
-		if (montant >0) this.montant = montant ;
+		if (montant > 0 ) this.montant = montant ;
 	}
 	
 	public Client getClient()

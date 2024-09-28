@@ -119,6 +119,7 @@ public class Client
 	
 	public void delete()
 	{
+		this.delete();
 	
 		
 	}
