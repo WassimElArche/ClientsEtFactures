@@ -53,19 +53,7 @@ public class Client
 		return facture ;
 	}
 	
-	/**
-	 * Retourne une copie de la liste des factures du client. 
-	 * @return une copie de la liste des factures du client.
-	 */
-
-	public List<Facture> getFactures()
-	{
-		List<Facture> test = new ArrayList<Facture>(); 
-		for(Facture fact : factureList){
-			test = factureList;
-		}
-		return test;
-	}
+	
 	
 	/**
 	 * Retourne la somme des montants des factures.
@@ -80,6 +68,19 @@ public class Client
 		}
 		return s;
 	}
+	/**
+	 * Retourne une copie de la liste des factures du client. 
+	 * @return une copie de la liste des factures du client.
+	 */
+
+	 public List<Facture> getFactures()
+	 {
+		 List<Facture> test = new ArrayList<Facture>(); 
+		 for(Facture fact : factureList){
+			 test = factureList;
+		 }
+		 return test;
+	 }
 
 	/**
 	 * Créé une facture en précisant si elle est reglée.
@@ -91,10 +92,16 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee)
 	{
 		
-		Facture nvl = new Facture(montant,reglee);
-		if (reglee) factRegle.add(nvl);
-		factureList.add(nvl);
-		return nvl ;
+		
+		if (reglee) {
+			Facture nvl = new Facture(montant,reglee);
+			factRegle.add(nvl);
+			factureList.add(nvl);
+			return nvl ;
+		}
+		return null;
+		
+		
 	}	
 	
 	/**
