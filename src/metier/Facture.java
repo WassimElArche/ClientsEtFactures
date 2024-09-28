@@ -30,7 +30,7 @@ public class Facture
 	
 	public Client getClient()
 	{
-		return ;
+		return null ;
 	}
 
 	/**
