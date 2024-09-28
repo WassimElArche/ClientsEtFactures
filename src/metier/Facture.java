@@ -13,14 +13,16 @@ public class Facture
 	private LocalDate date = LocalDate.now();
 
 
+
+
 	public Facture(int montant , boolean relgee){
-		this.montant = montant ;
+		if (montant > 0) this.montant = montant ;
 		this.reglee = reglee;
 	}
 
 
 	public Facture( int montant){
-		this.montant = montant ;
+		if (montant >0) this.montant = montant ;
 	}
 	
 	public Client getClient()
