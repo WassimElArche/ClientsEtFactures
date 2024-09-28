@@ -9,7 +9,7 @@ public class Client
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
-	protected String nom;
+	private String nom;
 	private List<Facture> factureList = new ArrayList<Facture>();
 	private List<Facture> factRegle = new ArrayList<Facture>();
 	private static List<Client> nbClient = new ArrayList<Client>();
@@ -123,6 +123,6 @@ public class Client
 	
 	public void delete()
 	{
-		this.nom = null;
+		this.delete();
 	}
 }
