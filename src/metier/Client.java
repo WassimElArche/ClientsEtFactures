@@ -11,10 +11,13 @@ public class Client
 	 */
 	protected String nom;
 	private List<Facture> factureList = new ArrayList<Facture>();
+	private List<Facture> factRegle = new ArrayList<Facture>();
+	private static List<Client> nbClient = new ArrayList<Client>();
 
 	public Client(String nom)
 	{
 		this.nom = nom;
+		nbClient.add(this);
 	}
 
 	/**
@@ -83,11 +86,10 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		if(reglee == true){
+		
 		Facture nvl = new Facture(montant,reglee);
-		factureList.add(nvl);
-		return nvl ;}
-		else return null;
+		if (reglee == true) factRegle.add(nvl);
+		return nvl ;
 	}	
 	
 	/**
@@ -97,7 +99,8 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return null;//
+
+		return factRegle;
 	}
 	
 
@@ -107,7 +110,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return null;
+		return nbClient;
 	}
 	
 	/**
