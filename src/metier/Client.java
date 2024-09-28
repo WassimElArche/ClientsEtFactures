@@ -93,6 +93,7 @@ public class Client
 		
 		Facture nvl = new Facture(montant,reglee);
 		if (reglee) factRegle.add(nvl);
+		factureList.add(nvl);
 		return nvl ;
 	}	
 	
