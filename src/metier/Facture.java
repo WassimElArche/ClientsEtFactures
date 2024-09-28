@@ -2,7 +2,7 @@ package metier;
 
 import java.time.LocalDate;
 
-public class Facture
+public class Facture extends Client
 {
 	/**
 	 * Retourne le client à qui est adressée la facture..
@@ -11,20 +11,23 @@ public class Facture
 	private int montant;
 	private boolean reglee;
 	private LocalDate date;
-	public Facture(int montant , boolean relgee){
 
+
+	public Facture(String nom ,int montant , boolean relgee){
+		super(nom);
 		this.montant = montant ;
 		this.reglee = reglee;
 	}
 
-	public Facture(int montant , boolean relgee , LocalDate date){
+	public Facture(String nom ,int montant , boolean relgee , LocalDate date){
+		super(nom);
 		this.date = date;
 		this.montant = montant ;
 		this.reglee = reglee;
 	}
 
-	public Facture(int montant ){
-		
+	public Facture(String nom , int montant){
+		super(nom);
 		this.montant = montant ;
 	}
 	
@@ -81,6 +84,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return new Facture(this.montant,this.reglee);
+		return new Facture(nom,this.montant,this.reglee);
 	}
 }
