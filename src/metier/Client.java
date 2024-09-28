@@ -44,7 +44,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		return new Facture(montant);
 	}
 	
 	/**
@@ -76,7 +76,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return null;
+		return new Facture(montant,reglee);
 	}	
 	
 	/**
@@ -105,6 +105,6 @@ public class Client
 	
 	public void delete()
 	{
-		this.delete();
+		
 	}
 }
