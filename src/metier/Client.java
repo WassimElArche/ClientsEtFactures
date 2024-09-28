@@ -10,6 +10,7 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	protected String nom;
+	private List<Facture> factureList = new ArrayList<Facture>();
 
 	public Client(String nom)
 	{
@@ -44,7 +45,9 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return new Facture(montant);
+		Facture facture = new Facture(montant);
+		factureList.add(facture);
+		return facture ;
 	}
 	
 	/**
@@ -54,7 +57,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return factureList;
 	}
 	
 	/**
@@ -76,7 +79,9 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return new Facture(montant,reglee);
+		Facture nvl = new Facture(montant,reglee);
+		factureList.add(nvl);
+		return nvl ;
 	}	
 	
 	/**
