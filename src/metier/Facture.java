@@ -15,8 +15,6 @@ public class Facture
 	
 		this.montant = montant ;
 		this.reglee = reglee;
-
-
 	}
 	
 	public Client getClient()
@@ -31,7 +29,7 @@ public class Facture
 	
 	public int getMontant()
 	{
-		return 0;
+		return this.montant;
 	}
 
 	/**
@@ -41,7 +39,9 @@ public class Facture
 	
 	public boolean estReglee()
 	{
-		return true;
+		if (reglee == true) return true;
+		else return false;
+	
 	}
 
 	/**
@@ -60,6 +60,7 @@ public class Facture
 	
 	public void delete()
 	{
+		
 	}
 	
 	/**
@@ -69,6 +70,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return null;
+		return this;
 	}
 }
