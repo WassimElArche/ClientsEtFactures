@@ -129,6 +129,6 @@ public class Client
 	{
 		List<Client> test = tous();
 		int a = tous().size();
-		test.set(a, null);
+		test.set(a-1, null);
 	}
 }
