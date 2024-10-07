@@ -120,7 +120,7 @@ public class Client
 	{
 		List<Client> t = new ArrayList<Client>();
 		for(Client z : nbClient){
-			t.add(a);
+			t.add(z);
 		}
 		return t;
 	}
