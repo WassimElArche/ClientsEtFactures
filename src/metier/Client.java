@@ -118,7 +118,11 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return nbClient;
+		List<Client> t = new ArrayList<Client>();
+		for(Client z : nbClient){
+			t.add(a);
+		}
+		return t;
 	}
 	
 	/**
