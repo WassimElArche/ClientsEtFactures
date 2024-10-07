@@ -127,9 +127,9 @@ public class Client
 	
 	public void delete()
 	{
-		List<Client> test = tous();
+		
 		int a = tous().size();
-		test.remove(a-1);
+		tous().remove(a-1);
 
 	}
 }
