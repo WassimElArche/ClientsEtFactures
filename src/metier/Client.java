@@ -77,7 +77,7 @@ public class Client
 	 {
 		 List<Facture> test = new ArrayList<Facture>(); 
 		 for(Facture fact : factureList){
-			 test.add(factureList);
+			 test.add(fact);
 		 }
 		 return test;
 	 }
