@@ -75,11 +75,12 @@ public class Client
 
 	 public List<Facture> getFactures()
 	 {
-		 List<Facture> test = new ArrayList<Facture>(); 
+		 /*List<Facture> test = new ArrayList<Facture>(); 
 		 for(Facture fact : factureList){
 			 test = factureList;
 		 }
-		 return test;
+		 return test;*/
+		 return factureList;
 	 }
 
 	/**
