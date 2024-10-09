@@ -78,6 +78,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return this;
+		return new Facture(this.montant,this.reglee);
 	}
 }
