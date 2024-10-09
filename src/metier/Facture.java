@@ -78,6 +78,9 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return new Facture(this.montant,this.reglee);
+		Facture t = new Facture(this.montant,this.reglee);
+		
+		return t;
+		
 	}
 }

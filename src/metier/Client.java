@@ -91,12 +91,11 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
+		Facture factReglee = new Facture(montant, reglee);
 		if(reglee){
-			Facture factReglee = new Facture(montant, reglee);
 			factRegle.add(factReglee);
-			return factReglee;
 		}
-		else return null;
+		return factReglee;
 
 		
 	}	
@@ -108,7 +107,7 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return factRegle;
+		return this.factRegle;
 	}
 	
 
