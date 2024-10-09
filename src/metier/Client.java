@@ -10,9 +10,13 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	private String nom;
+
 	private List<Facture> factureList = new ArrayList<Facture>();
+
 	private List<Facture> factRegle = new ArrayList<Facture>();
+
 	private static List<Client> nbClient = new ArrayList<Client>();
+
 
 	public Client(String nom)
 	{
@@ -92,7 +96,7 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee)
 	{
 		Facture factReglee = new Facture(montant, reglee);
-		if(reglee){
+		if(reglee == true){
 			factRegle.add(factReglee);
 		}
 		return factReglee;
@@ -107,7 +111,11 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return this.factRegle;
+		List<Facture> t = new ArrayList<Facture>();
+		for(Facture z : factRegle){
+			t.add(z);
+		}
+		return t;
 	}
 	
 
