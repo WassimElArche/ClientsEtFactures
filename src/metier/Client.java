@@ -51,13 +51,17 @@ public class Client
 	 */
 	
 	public Facture createFacture(int montant)
+	
 	{
-		if (montant >= 0 ){
+		try{
 			 Facture facture = new Facture(montant);
 			 factureList.add(facture);
 			 return facture ;
 			}
-		else return null;
+		catch (IllegalArgumentException e ){
+			
+			return null;
+		}
 		
 	}
 	
