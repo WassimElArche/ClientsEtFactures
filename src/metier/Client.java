@@ -52,9 +52,13 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture facture = new Facture(montant);
-		factureList.add(facture);
-		return facture ;
+		if (montant >= 0 ){
+			 Facture facture = new Facture(montant);
+			 factureList.add(facture);
+			 return facture ;
+			}
+		else return null;
+		
 	}
 	
 	
@@ -138,7 +142,7 @@ public class Client
 	
 	public void delete()
 	{
-		int a = tous().size() - 1 ;
-		nbClient.remove(a);
+		int a = tous().size();
+		nbClient.remove(a-1);
 	}
 }
