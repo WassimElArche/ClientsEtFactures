@@ -146,7 +146,6 @@ public class Client
 	
 	public void delete()
 	{
-		int a = tous().size();
-		nbClient.remove(a-1);
+		nbClient.remove(this);
 	}
 }
