@@ -15,7 +15,7 @@ public class Facture
 
 
 
-	public Facture(int montant , boolean relgee){
+	public Facture(int montant , boolean reglee){
 		if (montant > 0) this.montant = montant ;
 		this.reglee = reglee;
 	}
