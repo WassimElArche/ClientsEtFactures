@@ -3,6 +3,20 @@ package metier;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.internal.runners.statements.ExpectException;
+
+
+class Erreur extends Exception{
+
+	public String getMessage(){
+		
+		return "Le montant d'une facture ne peut pas être négatif.";
+	}
+
+}
+
+
+
 public class Client
 {
 	/** 
@@ -51,17 +65,17 @@ public class Client
 	 */
 	
 	public Facture createFacture(int montant)
-	
+	throws Erreur
 	{
-		try{
+		if (montant > 0){
 			 Facture facture = new Facture(montant);
 			 factureList.add(facture);
-			 return facture ;
-			}
-		catch (IllegalArgumentException e ){
+			 return facture ;}
+		else{
+			Erreur t = new Erreur();
+			throw t;
+		} 
 			
-			return null;
-		}
 		
 	}
 	
