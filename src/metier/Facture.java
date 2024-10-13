@@ -70,7 +70,7 @@ public class Facture
 	
 	public void delete()
 	{
-		client.setfactureList(this);
+		getClient().setfactureList(this);
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class Facture
 	public Facture copie()
 	{
 		Facture t = new Facture(client , this.montant,this.reglee);
-		client.addListFact(t);
+		getClient().addListFact(t);
 		return t;
 		
 	}
