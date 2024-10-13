@@ -8,6 +8,7 @@ public class Facture
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
 	 */
+	private Client client;
 	private int montant;
 	private boolean reglee;
 	private LocalDate date = LocalDate.now();
@@ -15,9 +16,10 @@ public class Facture
 
 
 
-	public Facture(int montant , boolean reglee){
+	public Facture(Client client , int montant , boolean reglee){
 		if (montant > 0) this.montant = montant ;
 		this.reglee = reglee;
+		this.client =  client;
 	}
 
 
@@ -27,7 +29,7 @@ public class Facture
 	
 	public Client getClient()
 	{
-		return null;
+		return client;
 	}
 
 	/**
@@ -68,7 +70,7 @@ public class Facture
 	
 	public void delete()
 	{
-		
+		client.setfactureList(this);
 	}
 	
 	/**
@@ -78,8 +80,8 @@ public class Facture
 	
 	public Facture copie()
 	{
-		Facture t = new Facture(this.montant,this.reglee);
-		
+		Facture t = new Facture(client , this.montant,this.reglee);
+		client.addListFact(t);
 		return t;
 		
 	}

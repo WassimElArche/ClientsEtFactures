@@ -38,6 +38,14 @@ public class Client
 		nbClient.add(this);
 	}
 
+	public void setfactureList(Facture t){
+		factureList.remove(t);
+	}
+
+	public void addListFact(Facture t){
+        factureList.add(t);
+    }
+
 	/**
 	 * Retourne le nom du client.
 	 * @return le nom du client.
@@ -114,7 +122,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture factReglee = new Facture(montant, reglee);
+		Facture factReglee = new Facture(this , montant, reglee);
 		if(reglee == true){
 			factRegle.add(factReglee);
 		}
