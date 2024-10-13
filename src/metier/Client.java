@@ -76,7 +76,7 @@ public class Client
 	
 	{
 		
-			 Facture facture = new Facture(montant);
+			 Facture facture = new Facture(this , montant);
 			 factureList.add(facture);
 			 return facture ;
 		

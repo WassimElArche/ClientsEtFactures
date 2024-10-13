@@ -23,8 +23,9 @@ public class Facture
 	}
 
 
-	public Facture( int montant){
+	public Facture(Client client , int montant){
 		if (montant > 0 ) this.montant = montant ;
+		this.client = client;
 	}
 	
 	public Client getClient()
@@ -70,7 +71,7 @@ public class Facture
 	
 	public void delete()
 	{
-		getClient().setfactureList(this);
+		this.client.setfactureList(this);
 	}
 	
 	/**
@@ -81,7 +82,7 @@ public class Facture
 	public Facture copie()
 	{
 		Facture t = new Facture(client , this.montant,this.reglee);
-		getClient().addListFact(t);
+		this.client.addListFact(t);
 		return t;
 		
 	}
