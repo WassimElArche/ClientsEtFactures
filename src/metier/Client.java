@@ -121,8 +121,9 @@ public class Client
 	 */
 	
 	public Facture createFacture(int montant, boolean reglee)
-	{
+	throws IllegalArgumentException{
 		Facture factReglee = new Facture(this , montant, reglee);
+		if(montant < 0) throw new IllegalArgumentException();
 		if(reglee == true){
 			factRegle.add(factReglee);
 		}
